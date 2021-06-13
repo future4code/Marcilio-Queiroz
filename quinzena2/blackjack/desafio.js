@@ -26,19 +26,19 @@
       } */
 
     console.log("Bem vindo ao jogo de Blackjack!")
+    let iniciarJogo = confirm("Quer iniciar uma nova rodada?")
 
     function jogoBlackJack(){
        //jogador
        let carta1Jogador = comprarCarta(); 
        let carta2Jogador = comprarCarta();
-       //let listaNipeJogador = [carta1Jogador.texto, carta2Jogador.texto] 
-
+      
        //testar cenarios jogador
-       carta1Jogador.valor = 4
+/*        carta1Jogador.valor = 4
        carta1Jogador.texto = "4"
 
        carta2Jogador.valor = 2
-       carta2Jogador.texto = "2"
+       carta2Jogador.texto = "2" */
        let listaNipeJogador = [carta1Jogador.texto, carta2Jogador.texto] 
        
        // testando cenario AA
@@ -53,13 +53,15 @@
        let listaNipeMaquina = [carta1Maquina.texto, carta2Maquina.texto]
 
        //testar cenarios Maquina
-       carta1Maquina.valor = 8
+/*        carta1Maquina.valor = 8
        carta1Maquina.texto = "8"
 
        carta2Maquina.valor = 4
-       carta2Maquina.texto = "4"
+       carta2Maquina.texto = "4" */
 
       
+
+      // Regra do A - A 
       while( (carta1Jogador.texto === "A" && carta1Jogador.valor === 11) && (carta2Jogador.texto === "A" && carta2Jogador.valor === 11) || (carta1Maquina.texto === "A" && carta1Maquina.valor === 11) && (carta2Maquina.texto === "A" && carta2Maquina.valor === 11) ){
         // console.log("Houve a regra do A - A")
          carta1Jogador = comprarCarta();
@@ -99,31 +101,40 @@
       }
          
       let mensagemJogador = `Usuário - cartas: ${listaNipeJogador} - pontuação: ${resultadoJogador}`
-      let mensagemMaquina = `Usuário - cartas: ${listaNipeMaquina} - pontuação ${resultadoMaquina}`
+      let mensagemMaquina = `Maquina - cartas: ${listaNipeMaquina} - pontuação ${resultadoMaquina}`
     
        console.log(mensagemJogador +"\n"+ mensagemMaquina)
+
+       let mensagemFinal = ""
     
       if(resultadoMaquina > 21 && resultadoJogador > 21){
-         console.log("Empate!")
+         mensagemFinal ="Empate!"
       }else if(resultadoJogador === resultadoMaquina){
-         console.log("Empate!")
+         mensagemFinal ="Empate!"
       }else if(resultadoMaquina > 21){
-         console.log("O usuário ganhou!")
+         mensagemFinal ="O usuário ganhou!"
       }else if(resultadoJogador > 21){
-         console.log("O computador ganhou!")
+         mensagemFinal ="O computador ganhou!"
       }else if(resultadoJogador > resultadoMaquina){
-         console.log("O usuário ganhou!")
+         mensagemFinal ="O usuário ganhou!"
       }else if(resultadoMaquina > resultadoJogador){
-         console.log("O computador ganhou!")
+         mensagemFinal ="O computador ganhou!"
       }else{
-         console.log("Alguma coisa deu errado")
+         mensagemFinal = "Alguma coisa deu errado"
       }
 
+      alert("Suas cartas são" + listaNipeJogador + ". Sua pontuação é " + resultadoJogador + ".\n" +
+      "As cartas do computador são " + listaNipeMaquina + "." + "A pontuação do computador é " + resultadoMaquina + ".\n" +
+      mensagemFinal)
+   }
 
+    while(iniciarJogo === true){
+      jogoBlackJack()
+      iniciarJogo = confirm("Quer iniciar uma nova rodada?")
     }
     
-    if(confirm("Gostaria de iniciar o jogo?")) {
+/*     if(iniciarJogo === true) {
        jogoBlackJack()
     } else {
        console.log("O jogo acabou")
-    }
+    } */
