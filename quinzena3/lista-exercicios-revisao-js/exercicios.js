@@ -121,7 +121,15 @@ function multiplicaArrayPor2(array) {
 }
 
 // EXERCÍCIO 17B
-function multiplicaArrayPor2S(array) {}
+function multiplicaArrayPor2S(array) {
+  let novaLista = array.map((index) =>{
+    return index * 2
+  })
+  let novaListaString = novaLista.map((index)=>{
+    return `${index}`
+  })
+  return novaListaString
+}
 
 // EXERCÍCIO 17C
 function verificaParidade(array) {}
