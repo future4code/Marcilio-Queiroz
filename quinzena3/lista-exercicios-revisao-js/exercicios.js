@@ -153,7 +153,12 @@ function retornaPessoasAutorizadas(pessoas) {
 }
 
 // EXERCÍCIO 18B
-function retornaPessoasNaoAutorizadas(pessoas) {}
+function retornaPessoasNaoAutorizadas(pessoas) {
+  let listaNaoEntrarMontanhaRussa = pessoas.filter(pessoas =>{
+    return pessoas.altura < 1.5 || pessoas.idade < 15 || pessoas.idade >= 60
+  })
+  return listaNaoEntrarMontanhaRussa
+}
 
 // EXERCÍCIO 19A
 function ordenaPorNome(consultasNome) {}
