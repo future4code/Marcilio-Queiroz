@@ -43,10 +43,24 @@ function comparaDoisNumeros(num1, num2) {
 }
 
 // EXERCÍCIO 10
-function segundoMaiorEMenor(array) {}
+function segundoMaiorEMenor(array) {
+
+}
 
 // EXERCÍCIO 11
-function ordenaArray(array) {}
+function ordenaArray(array) {
+    let length = array.length; 
+    for (let i = 0; i < length; i++) {
+      for (let j = 0; j < length - i - 1; j++) {
+        if (array[j] > array[j + 1]) {
+          let tmp = array[j]; 
+          array[j] = array[j + 1]; 
+          array[j + 1] = tmp; 
+        }
+      }
+    }
+  return array
+}
 
 // EXERCÍCIO 12
 function filmeFavorito() {
