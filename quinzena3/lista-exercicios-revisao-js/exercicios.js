@@ -91,13 +91,18 @@ function criaRetangulo(lado1, lado2) {
 function anonimizaPessoa(pessoa) {
   const novaPessoa = {
     ...pessoa,
-    nome: "ANÔNIMO"
-  }
-  return novaPessoa
+    nome: "ANÔNIMO",
+  };
+  return novaPessoa;
 }
 
 // EXERCÍCIO 16A
-function maioresDe18(arrayDePessoas) {}
+function maioresDe18(arrayDePessoas) {
+  let maiorIdade = arrayDePessoas.filter(arrayDePessoas =>{
+    return arrayDePessoas.idade >= 18
+  })
+  return maiorIdade
+}
 
 // EXERCÍCIO 16B
 function menoresDe18(arrayDePessoas) {}
