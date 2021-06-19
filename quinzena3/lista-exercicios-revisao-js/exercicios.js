@@ -113,7 +113,12 @@ function menoresDe18(arrayDePessoas) {
 }
 
 // EXERCÍCIO 17A
-function multiplicaArrayPor2(array) {}
+function multiplicaArrayPor2(array) {
+  let novaLista = array.map((index) =>{
+    return index * 2
+  })
+  return novaLista
+}
 
 // EXERCÍCIO 17B
 function multiplicaArrayPor2S(array) {}
