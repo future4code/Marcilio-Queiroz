@@ -145,7 +145,12 @@ function verificaParidade(array) {
 }
 
 // EXERCÍCIO 18A
-function retornaPessoasAutorizadas(pessoas) {}
+function retornaPessoasAutorizadas(pessoas) {
+  let listaEntrarMontanhaRussa = pessoas.filter(pessoas =>{
+    return pessoas.altura >= 1.5 && pessoas.idade >= 15 && pessoas.idade <= 59
+  })
+  return listaEntrarMontanhaRussa
+}
 
 // EXERCÍCIO 18B
 function retornaPessoasNaoAutorizadas(pessoas) {}
