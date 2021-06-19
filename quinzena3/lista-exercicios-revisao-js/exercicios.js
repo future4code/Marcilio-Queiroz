@@ -132,7 +132,17 @@ function multiplicaArrayPor2S(array) {
 }
 
 // EXERCÍCIO 17C
-function verificaParidade(array) {}
+function verificaParidade(array) {
+  let listaMensagem = []
+  let listVerificarImparOuPar = array.filter((index)=>{
+    if(index % 2 !== 0){
+      listaMensagem.push(`${index} é ímpar`)
+    }else{
+      listaMensagem.push(`${index} é par`)
+    }
+  })
+  return listaMensagem
+}
 
 // EXERCÍCIO 18A
 function retornaPessoasAutorizadas(pessoas) {}
