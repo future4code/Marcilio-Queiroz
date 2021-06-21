@@ -8,28 +8,83 @@ function inverteArray(array) {
 }
 
 // EXERCÍCIO 02
-function retornaNumerosParesElevadosADois(array) {}
+function retornaNumerosParesElevadosADois(array) {
+  let listaPares = array.filter((index)=>{
+    return index % 2 === 0
+  })
+  let listaParesElevado2 = listaPares.map((index)=>{
+    return index * index
+  })
+
+  return listaParesElevado2
+
+}
 
 // EXERCÍCIO 03
-function retornaNumerosPares(array) {}
+function retornaNumerosPares(array) {
+  let listaPares = array.filter((index)=>{
+    return index % 2 === 0
+  })
+  return listaPares
+}
 
 // EXERCÍCIO 04
-function retornaMaiorNumero(array) {}
+function retornaMaiorNumero(array) {
+  let maiorNumero = 0
+  for(let i = 0; i < array.length; i++){
+    if(maiorNumero <= array[i]){
+      maiorNumero = array[i]
+    }
+  }
+  return maiorNumero
+}
 
 // EXERCÍCIO 05
-function retornaQuantidadeElementos(array) {}
+function retornaQuantidadeElementos(array) {
+  return array.length
+}
 
 // EXERCÍCIO 06
-function retornaExpressoesBooleanas() {}
+function retornaExpressoesBooleanas() {
+  const booleano1 = true
+  const booleano2 = false
+  const booleano3 = !booleano2 
+  const booleano4 = !booleano3 
+
+  let listaBooleano = []
+  listaBooleano.push(booleano1 && booleano2 && !booleano4)
+  listaBooleano.push((booleano1 && booleano2) || !booleano3)
+  listaBooleano.push((booleano2 || booleano3) && (booleano4 || booleano1))
+  listaBooleano.push(!(booleano2 && booleano3) || !(booleano1 && booleano3))
+  listaBooleano.push(!(booleano1) && !(booleano3) || (!booleano4 && booleano3 && booleano3))
+  return listaBooleano
+}
 
 // EXERCÍCIO 07
-function retornaNNumerosPares(n) {}
+function retornaNNumerosPares(n) {
+  let listaPares = []
+  let flag = (2 * n) -2
+  for(let i = 0; i<=flag; i++) {
+    if(i % 2 === 0){
+      listaPares.push(i)
+    }
+  }
+  return listaPares
+}
 
 // EXERCÍCIO 08
 function checaTriangulo(a, b, c) {
   // return 'Escaleno'
   // return 'Equilátero'
   // return 'Isósceles'
+  if(a === b && a === c){
+    return 'Equilátero'
+  }else if(a === b && a !==c || b === c && b !== a || a === c && a !==b){
+    return 'Isósceles'
+  }else if(a !== b && a !== c && b !== c){
+    return 'Escaleno'
+  }
+  return
 }
 
 // EXERCÍCIO 09
@@ -161,7 +216,16 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 }
 
 // EXERCÍCIO 19A
-function ordenaPorNome(consultasNome) {}
+function ordenaPorNome(consultasNome) {
+  
+
+
+  /*   let alfabeto = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+  let ordenarNomes = consultasNome.filter((index)=>{
+    return index.nome.charAt(0).tolowercase() === "j"
+  })
+  return ordenarNomes */
+}
 
 // EXERCÍCIO 19B
 function ordenaPorData(consultasData) {}
