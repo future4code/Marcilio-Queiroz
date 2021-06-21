@@ -95,6 +95,26 @@ function comparaDoisNumeros(num1, num2) {
   //   maiorDivisivelPorMenor: Y,
   //   diferenca: Z
   // }
+  let maiorNum = 0
+  let maiorNumDivMenor = false
+  let diferenca = 0
+
+  if(num1 >= num2){
+    maiorNum = num1
+    maiorNumDivMenor = num1 % num2 === 0
+    diferenca = num1 - num2
+  }else if(num2 > num1){
+    maiorNum = num2
+    maiorNumDivMenor = num2 % num1 === 0
+    diferenca = num2 - num1
+  }
+  const maiorNumero = {
+    maiorNumero: maiorNum,
+    maiorDivisivelPorMenor: maiorNumDivMenor,
+    diferenca: diferenca,
+  }
+
+  return maiorNumero
 }
 
 // EXERCÍCIO 10
