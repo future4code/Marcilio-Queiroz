@@ -1,0 +1,21 @@
+.Tabela img{
+    width: 100px;
+    height: 100px;
+}
+
+.Tabela th{
+    padding: 20px;
+    font-size:20px;
+}
+
+.Tabela td{
+    padding: 12px;
+    text-align: center;
+}
+
+h2{
+    margin-left: 350px;
+    margin-bottom: 28px;
+    margin-top: 28px;
+}
+

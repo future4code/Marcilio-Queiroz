@@ -1,0 +1,14 @@
+.Navegar{
+    text-align: center;
+    margin: 16px 0 16px 0;
+}
+
+.Navegar a{
+    font-size: 20px;
+    margin-right: 28px;
+    text-decoration: none;
+}
+
+.Navegar a:hover{
+    color: rgb(27, 245, 27);
+}
