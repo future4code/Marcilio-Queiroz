@@ -1,0 +1,17 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+
+.Cabecalho{
+    text-align: center;
+    background-color: dimgray;
+    padding: 40px;
+    color: white
+}
+
+.Cabecalho p{
+    font-size: 30px
+}
+
